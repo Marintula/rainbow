@@ -1,0 +1,90 @@
+body {
+    margin: 25%;
+    padding: 0;
+    background: #050210;
+}
+
+.circle1 {
+    position: relative;
+    margin: 200px 0;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+}
+
+.circle1::before,
+.circle1::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;   
+    top: -50px;
+    left: -50px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    background-size: 400%;
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+    animation: Funny-circle 2s linear infinite;
+    
+}
+
+.circle1::after {
+    filter: blur(80px);
+}
+@keyframes Funny-circle {
+    0% {
+        transform: rotate(0);
+        background-position: 0 0;
+    }
+    
+    50% {
+        transform: rotate(180deg);
+        background-position: 400% 0;
+    }
+    
+    100% {
+        transform: rotate(360deg);
+        background-position: 0 0;
+    }
+
+}
+
+.circle2 {
+    position: relative;
+    margin: 200px 0;
+    width: 500px;
+    height: 500px;
+    background: #050210;
+    border-radius: 50%;
+
+
+    animation: pulsing-circle 1s linear infinite;
+}
+
+
+@keyframes pulsing-circle {
+    0% {
+      transform: scale(0, 0);
+      filter: brightness(100%);
+    }
+    50% {
+      transform: scale(.5, .5);  
+      filter: brightness(150%)
+    }
+        
+    100% {
+      transform: scale(1, 1);  
+      filter: brightness(200%);
+    } 
+  }
+
+  .circle3 {
+    margin: 200px 0;
+    width: 500px;
+    height: 500px;
+    background: #050210;
+    border-radius: 50%;
+    z-index: -1;
+    
+  }
